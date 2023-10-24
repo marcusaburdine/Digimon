@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Search from "../../components/search/search"
+import Search from "../../components/navigation/search/search"
 
 
 
@@ -9,7 +9,9 @@ export default function Digimon() {
 
 
 return(
-    <><Search  /></>
+    <>
+    <Search/>
+    </>
 
 
 )

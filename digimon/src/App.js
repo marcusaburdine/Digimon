@@ -10,7 +10,7 @@ import Game from "./pages/game/game"
 export default function App() {
   const [user, setUser] = useState(getUser());
 
-  return (
+ return (
 
     <>
       <Routes>
