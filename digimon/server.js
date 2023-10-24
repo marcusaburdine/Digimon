@@ -6,6 +6,7 @@ const cors = require("cors");
 
 require("dotenv").config();
 
+
 //CONNECT TO MONGODB
 require("./config/database");
 
@@ -17,6 +18,7 @@ app.use(express.static(path.join(__dirname, "build")));
 
 //API ROUTES
 const userRoute = require("./routes/api/user");
+
 // const loggedIn = require('./config/loggedIn')
 app.use("/api/user", userRoute);
 

@@ -1,0 +1,15 @@
+
+{
+"digimon": [
+{
+    "id": 1,
+    "name":"",
+    "level":"",
+    "type":"",
+    "attribute":"",
+    "health":0,
+    "speed":0,
+    "skills":[[]],
+    "profile":""
+}
+]}
