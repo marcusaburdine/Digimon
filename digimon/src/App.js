@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { getUser } from "./utilities/service/user";
+import styles from "./App.module.css"
 import SignUp from "./pages/signUp/signUp";
 import LogIn from './pages/login/login'
 import Home from "./pages/home/home"
@@ -13,6 +14,7 @@ export default function App() {
  return (
 
     <>
+    <div className={styles.app}>
       <Routes>
       <Route path='/' element={ <SignUp setUser={setUser} />} />
       <Route path='/logIn' element={ <LogIn setUser={setUser} />} />
@@ -20,6 +22,7 @@ export default function App() {
       <Route path='/digiDex' element={ <DigiDex setUser={setUser} />} />
       <Route path='/game' element={ <Game setUser={setUser} />} />
       </Routes>
+      </div>
     </>
 
   )

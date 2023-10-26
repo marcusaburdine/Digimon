@@ -39,8 +39,10 @@ export default function SignUpFormForm({ setUser }) {
   const disable = credentials.password !== credentials.confirm;
   return (
     <>
-      <div className=''>
+      <div className={styles.container}>
         <form autoComplete='off' onSubmit={handleSubmit}>
+        <label>Username</label>
+        <br />
           <input
             type='text'
             name='name'
@@ -51,6 +53,8 @@ export default function SignUpFormForm({ setUser }) {
             required
           />
           <br />
+          <label>Email</label>
+          <br />
           <input
             type='email'
             name='email'
@@ -60,6 +64,8 @@ export default function SignUpFormForm({ setUser }) {
             required
           />
           <br />
+          <label>Password</label>
+          <br />
           <input
             type='password'
             name='password'
@@ -68,6 +74,8 @@ export default function SignUpFormForm({ setUser }) {
             placeholder='Enter Password'
             required
           />
+          <br />
+          <label>Confirm</label>
           <br />
           <input
             type='password'
@@ -82,12 +90,12 @@ export default function SignUpFormForm({ setUser }) {
           <button className={styles.button} type='submit' disabled={disable}>
             SUBMIT
           </button>
+          <br />
+          <Link className={styles.link} to="/logIn">Already have an account? Log In!</Link>
         </form>
+        
       </div>
       <p className=''>&nbsp;{credentials.error}</p>
-
-      <Link to="/logIn"><button>LOGIN</button></Link>
-
     </>
   );
 }

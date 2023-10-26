@@ -1,20 +1,17 @@
 import { useState, useEffect } from "react";
-import Search from "../../components/navigation/search/search"
+import styles from "./digiDex.module.css"
+import Header from "../../components/navigation/navigation/header"
 
 
 
-export default function Digimon() {
-    const [digimon, setDigimon] = useState(null)
-   
+export default function DigiDex() {
 
-
-return(
-    <>
-    <Search/>
-    </>
-
-
-)
-
-
+    return (
+        <>
+            <Header />
+            <div className= {styles.container}>
+                <p> hello</p>
+            </div>
+        </>
+    )
 }

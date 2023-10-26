@@ -36,8 +36,9 @@ export default function LoginForm({ setUser }) {
   return (
     <>
     <div className={styles.container}>
-      <div className={styles.form}>
         <form autoComplete='off' onSubmit={handleSubmit}>
+        <label> Password</label>
+          <br />
           <input
             type='email'
             name='email'
@@ -48,6 +49,8 @@ export default function LoginForm({ setUser }) {
             required
           />
           <br />
+          <label> Password</label>
+          <br />
           <input
             type='password'
             name='password'
@@ -57,13 +60,14 @@ export default function LoginForm({ setUser }) {
             required
           />
           <br />
-          <button className={styles.button} type='submit'>
-            <span>Login</span>
-          </button>
+          <button className={styles.button} type='submit'>LOGIN</button>
+          <br />
+          <Link className={styles.link} to="/">Don't have an account? Sign Up! </Link>
+          
         </form>
-      </div>
-      <p className=''>{credentials.error}</p>
-      <Link to="/"><button>SIGN UP</button></Link>
+      
+      <p>{credentials.error}</p>
+      
       </div>
     </>
   );
